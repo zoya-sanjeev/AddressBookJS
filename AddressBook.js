@@ -57,4 +57,28 @@ class Contact{
         else
             throw 'State incorrect';
     }
+    get zipCode(){ return this._zipCode; }
+    set zipCode(zipCode){
+        let zipCodeRegex = RegExp('^[0-9]{3}\\s{0,1}[0-9]{3}$');
+        if(zipCodeRegex.test(zipCode))
+            this._zipCode=zipCode;
+        else 
+            throw 'ZipCode incorrect';
+    }
+    get phoneNumber(){ return this._phoneNumber; }
+    set phoneNumber(phoneNumber){
+        let phoneRegex = RegExp('[0-9]{2,3}\\s[0-9]{10}$');
+        if(phoneRegex.test(phoneNumber))
+            this._phoneNumber=phoneNumber;
+        else 
+            throw 'Phone Number incorrect';
+    }
+    get email(){ return this._email; }
+    set email(email){
+        let emailRegex = RegExp('[a-zA-Z]{1,}([\\.\\_\\-\\+]?[a-zA-Z0-9]+)@[a-z0-9]+[.][a-z]+[.]?[a-z]{2,3}?$');
+        if(emailRegex.test(email))
+            this._email=email;
+        else 
+            throw 'Email incorrect';
+    }
 }
