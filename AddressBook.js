@@ -33,4 +33,12 @@ class Contact{
             this._lastName = name;
         else throw 'Last Name is incorrect';
     }
+    get address() { return this._address; }
+    set address(address){
+        let addressRegex = RegExp('^[A-Z][a-z]{4,}');
+        if(addressRegex.test(_address))
+            this._address=address;
+        else
+            throw 'Address incorrect';
+    }
 }
