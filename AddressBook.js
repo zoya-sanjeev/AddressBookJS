@@ -36,9 +36,25 @@ class Contact{
     get address() { return this._address; }
     set address(address){
         let addressRegex = RegExp('^[A-Z][a-z]{4,}');
-        if(addressRegex.test(_address))
+        if(addressRegex.test(address))
             this._address=address;
         else
             throw 'Address incorrect';
+    }
+    get city() { return this._city; }
+    set city(city){
+        let cityRegex = RegExp('^[A-Z][a-z]{4,}');
+        if(cityRegex.test(city))
+            this._city=city;
+        else
+            throw 'City incorrect';
+    }
+    get state() { return this._state; }
+    set state(state){
+        let stateRegex = RegExp('^[A-Z][a-z]{4,}');
+        if(stateRegex.test(state))
+            this._state=state;
+        else
+            throw 'State incorrect';
     }
 }
