@@ -18,4 +18,19 @@ class Contact{
     this.phoneNumber = params[6];
     this.email = params[7];
     }
+
+    get firstName() { return this._firstName; }
+    set firstName(name) {
+        let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
+        if(nameRegex.test(name))
+            this._firstName = name;
+        else throw 'First Name is incorrect';
+    }
+    get lastName() { return this._firstName; }
+    set lastName(name) {
+        let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
+        if(nameRegex.test(name))
+            this._lastName = name;
+        else throw 'Last Name is incorrect';
+    }
 }
