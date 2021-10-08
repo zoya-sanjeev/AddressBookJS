@@ -196,9 +196,14 @@ function getCountInCityOrState(fieldName,fieldValue){
 console.log("Number of Contacts in city Hyderabad:"+ getCountInCityOrState('city','Hyderabad'));
 console.log("Number of contacts in state Karnataka: "+ getCountInCityOrState('state','Karnataka'));
 
-function sortAddressBook(){
+function sortAddressBookByName(){
     let sortedBook= addressBook.sort((contact1, contact2) => (contact1.firstName).localeCompare(contact2.firstName));
     return sortedBook;
 }
+function sortAddressBookByCity(){
+    let sortedBook= addressBook.sort((contact1, contact2) => (contact1.city).localeCompare(contact2.city));
+    return sortedBook;
+}
+
 
 console.log("Sorted Address Book"+sortAddressBook());
