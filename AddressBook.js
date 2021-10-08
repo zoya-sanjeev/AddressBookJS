@@ -85,6 +85,7 @@ try{
 addressBook.push(new Contact('Zoya','Sanjeev','Abcdaddress','Hyderabad','Telangana','500100','91 9900990099','zoya@gmail.com'));
 addressBook.push(new Contact('Harry','Potter','Hogwarts','Hyderabad','Telangana','500200','91 9900991199','harry@gmail.com'));
 addressBook.push(new Contact('Ron','Weasley','Burrow','Bangalore','Karnataka','561100','91 9911990099','ron@gmail.com'));
+addressBook.push(new Contact('Dummy','Dumm','Address','Bangalore','Karnataka','562200','91 9911990099','dummy@gmail.com'));
 console.log(addressBook);
 }catch(e){
     console.error(e);
@@ -125,4 +126,11 @@ function deleteContact(firstName,lastName){
     else
         throw 'Contact not found';
     
+}
+try{
+    deleteContact('Dummy','Dumm');  
+    deleteContact('Hermione','Granger');
+
+}catch(e){
+    console.error(e);
 }
