@@ -81,6 +81,13 @@ class Contact{
 }
 
 let addressBook = new Array();
+function addContact(newcontact){
+    let duplicate= addressBook.find(contact=> contact._firstName==newcontact._firstName && contact._lastName== newcontact._lastName);
+    if(duplicate==-1)
+        addressBook.push(newcontact);
+    else
+        throw 'Duplicate contact' + newcontact;
+}
 try{
 addressBook.push(new Contact('Zoya','Sanjeev','Abcdaddress','Hyderabad','Telangana','500100','91 9900990099','zoya@gmail.com'));
 addressBook.push(new Contact('Harry','Potter','Hogwarts','Hyderabad','Telangana','500200','91 9900991199','harry@gmail.com'));
