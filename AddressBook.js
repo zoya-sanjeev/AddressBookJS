@@ -170,3 +170,8 @@ try{
 }catch(e){
     console.error(e)
 }
+
+function getContactsByCity(cityName){
+    let contacts=addressBook.filter(contact=> contact._city==cityName);
+    return contacts;
+}
