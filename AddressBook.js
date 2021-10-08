@@ -213,4 +213,7 @@ function sortAddressBookByZipCode(){
     return sortedBook;
 }
 
-console.log("Sorted Address Book"+sortAddressBook());
+console.log("Sorted Address Book by name:"+sortAddressBookByName());
+console.log("Sorted Address Book by city:"+sortAddressBookByCity());
+console.log("Sorted Address Book by state:"+sortAddressBookByState());
+console.log("Sorted Address Book by zip:"+sortAddressBookByZipCode());
