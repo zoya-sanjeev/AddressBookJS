@@ -162,3 +162,11 @@ function searchInState(firstName, lastName, stateName){
     else
         throw 'Contact not found';
 }
+
+try{
+    searchInCity('Zoya','Sanjeev','Hyderabad');
+    searchInState('Zoya','Sanjeev','Telangana');
+    searchInState('Zoya','Sanjeev','Karnataka');
+}catch(e){
+    console.error(e)
+}
