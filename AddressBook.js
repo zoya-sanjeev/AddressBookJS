@@ -155,3 +155,10 @@ function searchInCity(firstName, lastName, cityName){
     else
         throw 'Contact not found';
 }
+function searchInState(firstName, lastName, stateName){
+    let contact=addressBook.find(contact => contact._firstName==firstName && contact._lastName==lastName && contact.state==stateName);
+    if(contact!=null)
+        console.log("Contact found: "+ contact);
+    else
+        throw 'Contact not found';
+}
