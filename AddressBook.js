@@ -179,3 +179,5 @@ function getContactsByState(stateName){
     let contacts=addressBook.filter(contact=> contact._state==stateName);
     return contacts;
 }
+console.log("Contact from city Hyderabad: "+ getContactsByCity('Hyderabad'));
+console.log("Contact from state Karnataka: "+ getContactsByState('Karnataka'));
