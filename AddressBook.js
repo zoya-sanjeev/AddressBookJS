@@ -1,13 +1,5 @@
 class Contact{
-    firstName;
-    lastName;
-    address;
-    city;
-    state;
-    zipCode;
-    phoneNumber;
-    email;
-    
+   
     constructor(... params){
     this.firstName = params[0];
     this.lastName = params[1];
@@ -81,4 +73,14 @@ class Contact{
         else 
             throw 'Email incorrect';
     }
+
+    toString() {
+        return "first name="+ this.firstName +",last name="+ this.lastName +", address="+ this.address+", city="+ this.city
+        +", state="+ this.state+", zip="+ this.zip+", phone="+ this.phoneNumber+", email="+ this.email+"\n";
+    }
 }
+
+let addressBook = new Array();
+let contact = new Contact('Zoya','Sanjeev','Abcd Address','Hyderabad','Telangana','500100','9900990099','zoya@gmail.com');
+contact.email="zoya";
+console.log(contact);
