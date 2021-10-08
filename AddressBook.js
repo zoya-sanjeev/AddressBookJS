@@ -204,6 +204,10 @@ function sortAddressBookByCity(){
     let sortedBook= addressBook.sort((contact1, contact2) => (contact1.city).localeCompare(contact2.city));
     return sortedBook;
 }
+function sortAddressBookByState(){
+    let sortedBook= addressBook.sort((contact1, contact2) => (contact1.state).localeCompare(contact2.state));
+    return sortedBook;
+}
 
 
 console.log("Sorted Address Book"+sortAddressBook());
