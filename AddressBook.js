@@ -147,3 +147,11 @@ function getCountOfContacts(){
     return count;
 }
 console.log("Number of contacts in addressBook are: "+ getCountOfContacts());
+
+function searchInCity(firstName, lastName, cityName){
+    let contact=addressBook.find(contact => contact._firstName==firstName && contact._lastName==lastName && contact.city==cityName);
+    if(contact!=null)
+        console.log("Contact found: "+ contact);
+    else
+        throw 'Contact not found';
+}
