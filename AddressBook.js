@@ -181,3 +181,15 @@ function getContactsByState(stateName){
 }
 console.log("Contact from city Hyderabad: "+ getContactsByCity('Hyderabad'));
 console.log("Contact from state Karnataka: "+ getContactsByState('Karnataka'));
+
+function getCountInCityOrState(fieldName,fieldValue){
+    let count=0;
+    switch(fieldName){
+        case 'city': count = addressBook.filter(contact=> contact._city==fieldValue).reduce(countOfContacts=> countOfContacts+=1);
+                    break;
+        case 'state': count = addressBook.filter(contact=> contact._city==fieldValue).reduce(countOfContacts=> countOfContacts+=1);
+                    break;
+        default: console.log('Invalid field name');
+    }
+    return count;
+}
