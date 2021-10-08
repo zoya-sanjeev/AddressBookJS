@@ -134,3 +134,9 @@ try{
 }catch(e){
     console.error(e);
 }
+
+function getCountOfContacts(){
+    let count= addressBook.reduce(count => count+=1, 0);
+    return count;
+}
+console.log("Number of contacts in addressBook are: "+ getCountOfContacts());
