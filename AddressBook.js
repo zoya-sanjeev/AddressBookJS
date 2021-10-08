@@ -110,3 +110,6 @@ function editContact(firstName, lastName,fieldToBeEdited, newField){
         default: console.log("Invalid Field");
     }
 }
+
+editContact('Zoya','Sanjeev','address','Secunderabad');
+console.log(addressBook);
