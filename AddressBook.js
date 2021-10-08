@@ -81,6 +81,11 @@ class Contact{
 }
 
 let addressBook = new Array();
-let contact = new Contact('Zoya','Sanjeev','Abcd Address','Hyderabad','Telangana','500100','9900990099','zoya@gmail.com');
-contact.email="zoya";
-console.log(contact);
+try{
+addressBook.push(new Contact('Zoya','Sanjeev','Abcdaddress','Hyderabad','Telangana','500100','91 9900990099','zoya@gmail.com'));
+addressBook.push(new Contact('Harry','Potter','Hogwarts','Hyderabad','Telangana','500200','91 9900991199','harry@gmail.com'));
+addressBook.push(new Contact('Ron','Weasley','Burrow','Bangalore','Karnataka','561100','91 9911990099','ron@gmail.com'));
+}catch(e){
+    console.error(e);
+} 
+    console.log(addressBook);
