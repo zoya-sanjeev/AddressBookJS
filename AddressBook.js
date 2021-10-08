@@ -115,3 +115,14 @@ function editContact(firstName, lastName,fieldToBeEdited, newField){
 }
 
 editContact('Zoya','Sanjeev','address','Secunderabad');
+
+function deleteContact(firstName,lastName){
+    let indexToBeDeleted= addressBook.findIndex(contact=> contact._firstName==firstName && contact._lastName==lastName);
+    if(indexToBeDeleted!=-1){
+        addressBook.splice(indexToBeDeleted,1);
+        console.log("Deleted contact");
+    }
+    else
+        throw 'Contact not found';
+    
+}
